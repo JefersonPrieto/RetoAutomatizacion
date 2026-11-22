@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/Features/register.feature",
+        features = "src/test/resources/features/RegistroUsuarioNuevo.feature",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        glue = "reto.automatizacion.stepsdefinitions"
+        glue = "com.qvision.stepDefinitions"
 )
 public class RegisterRunner {
 
