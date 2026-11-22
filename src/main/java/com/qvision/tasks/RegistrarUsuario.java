@@ -6,11 +6,15 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class RegistrarUsuario implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor){
+        WaitUntil.the(FormularioRegisterPage.BTN_REGISTRAR, isVisible()).forNoMoreThan(10).seconds();
         actor.attemptsTo(Enter.theValue("Jeferson").into(FormularioRegisterPage.TXT_NOMBRE));
         actor.attemptsTo(Enter.theValue("Prieto").into(FormularioRegisterPage.TXT_APELLIDO));
         actor.attemptsTo(Enter.theValue("2001-04-16").into(FormularioRegisterPage.TXT_FECHA_NACIMIENTO));
@@ -23,7 +27,6 @@ public class RegistrarUsuario implements Task {
         actor.attemptsTo(Enter.theValue("3214217731").into(FormularioRegisterPage.TXT_TELEFONO));
         actor.attemptsTo(Enter.theValue("JefersonPrueba@credibanco.com").into(FormularioRegisterPage.TXT_CORREO));
         actor.attemptsTo(Enter.theValue("Credibanco2026**").into(FormularioRegisterPage.TXT_CONTRASEÑA));
-
         //actor.attemptsTo(Click.on(FormularioRegisterPage.BTN_REGISTRAR));
     }
 
