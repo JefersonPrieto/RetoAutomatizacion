@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/CatalogoPrecioStepDefinitions",
+        features = "src/test/resources/features/CatalogoPrecio.feature",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         glue = "com.qvision.stepDefinitions"
 )
-public class CatalogoStepDefinitions {
+public class CatalogoPrecioRunner {
 
 
 }
