@@ -2,7 +2,7 @@ package com.qvision.userInterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
 
-public class FormularioRegisterPage {
+public class FormularioRegistroPage {
 
     public static final Target TXT_NOMBRE = Target
             .the("aqui vamos a ingresar el nombre de usuario")
@@ -16,7 +16,8 @@ public class FormularioRegisterPage {
             .the("aqui vamos a ingresar la fecha de nacimiento del usuario")
             .locatedBy("//input[@data-test = 'dob']");
 
-    public static final Target SLC_PAIS = Target.the("aqui seleccionamos el pais")
+    public static final Target SLC_PAIS = Target
+            .the("aqui seleccionamos el pais")
             .locatedBy("[data-test='country']");
 
     public static final Target TXT_CODIGO_POSTAL = Target.the("aqui vamos a ingresar el codigo postal")
