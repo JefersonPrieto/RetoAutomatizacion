@@ -15,7 +15,8 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class IngresarDatosLogin implements Task {
 
-    public static IngresarDatosLogin ingresaCorreoYContrasena(){
+    public static IngresarDatosLogin ingresaCorreoYContrasena()
+    {
         return Tasks.instrumented(IngresarDatosLogin.class);
     }
 
